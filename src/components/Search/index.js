@@ -1,7 +1,9 @@
+import { arrayEmoji } from '../EmojiList/emojiData.js';
 import './style.css';
 
-export function Search() {
+
+export function Search(props) {
     return (
-        <input className="search" type="search" placeholder="search emoji" />
+        <input value={props.value} className="search" type="search" placeholder="Search emoji" />
     )
 }
