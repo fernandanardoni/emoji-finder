@@ -1,0 +1,22 @@
+ul {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    height: 50px;
+    margin: 5px 0;
+    text-align: start;
+    list-style-type: none;
+
+    border: 1px solid salmon;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+li:hover {
+    background-color: rgba(250, 128, 114, 0.336);
+}
