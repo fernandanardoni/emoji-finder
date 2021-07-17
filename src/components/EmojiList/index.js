@@ -4,16 +4,28 @@ import { useState } from 'react';
 import './style.css'
 
 export function EmojiList() {
-   
-    // arrayEmoji.map(emoji => console.log("palavra chave", emoji.keywords))
+   const [search, setSearch] = useState("");
+
+    
     return (
         <>
-            <Search/>
+            <Search value={search} event={(e) => setSearch(e.target.value)}/>
             <ul>
-               {arrayEmoji.map(emoji => 
-                   <li>{emoji.symbol + emoji.title}</li>
-               )}
-            </ul>
+            {arrayEmoji
+            .filter(emoji => emoji.keywords.includes(search))
+            .map(emoji => 
+                <li>{emoji.symbol + emoji.title}</li>
+            )}    
+            </ul>    
+            
+            
         </>
     )
 }
+
+
+{/* <ul>
+   {arrayEmoji.map(emoji => 
+       <li>{emoji.symbol + emoji.title}</li>
+   )}
+</ul> */}

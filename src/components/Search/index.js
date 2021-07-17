@@ -4,6 +4,6 @@ import './style.css';
 
 export function Search(props) {
     return (
-        <input value={props.value} className="search" type="search" placeholder="Search emoji" />
+        <input value={props.value} onChange={props.event} className="search" type="search" placeholder="Search emoji" />
     )
 }
