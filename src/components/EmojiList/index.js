@@ -1,5 +1,6 @@
 import { arrayEmoji } from './emojiData.js';
 import { Search } from '../Search/index.js';
+import { CopyButton } from '../CopyButton/index.js'
 import { useState } from 'react';
 import './style.css'
 
@@ -14,18 +15,13 @@ export function EmojiList() {
             {arrayEmoji
             .filter(emoji => emoji.keywords.includes(search))
             .map(emoji => 
-                <li>{emoji.symbol + emoji.title}</li>
+                <li>{emoji.symbol + emoji.title}
+                <CopyButton/>
+                </li>
             )}    
-            </ul>    
-            
-            
+            </ul>               
         </>
     )
 }
 
 
-{/* <ul>
-   {arrayEmoji.map(emoji => 
-       <li>{emoji.symbol + emoji.title}</li>
-   )}
-</ul> */}

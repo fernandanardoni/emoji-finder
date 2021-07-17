@@ -6,4 +6,10 @@
     border-radius: 10px;
      
     text-align: start;
+    text-indent: 10px;
+}
+
+.search::placeholder {
+    font-family: inherit;
+    font-size: 16px;
 }
