@@ -2,7 +2,7 @@ import { arrayEmoji } from './emojiData.js';
 import { Search } from '../Search/index.js';
 import { CopyButton } from '../CopyButton/index.js'
 import { useState } from 'react';
-import './style.css'
+import './style.css';
 
 export function EmojiList() {
    const [search, setSearch] = useState("");
@@ -16,7 +16,7 @@ export function EmojiList() {
             .filter(emoji => emoji.keywords.includes(search))
             .map(emoji => 
                 <li>{emoji.symbol + emoji.title}
-                <CopyButton/>
+                <CopyButton event={() => navigator.clipboard.writeText(emoji.symbol)}/>
                 </li>
             )}    
             </ul>               

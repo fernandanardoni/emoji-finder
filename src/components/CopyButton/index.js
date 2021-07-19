@@ -1,8 +1,11 @@
-import './style.css'
+import { useState } from 'react';
+import './style.css';
 
-export function CopyButton() {
+export function CopyButton(props) {
+
+    const [copyStatus, setCopyStatus] = useState('Copy to clipboard')
 
     return (
-        <button>Copy to clipboard</button>
+        <button onClick={props.event, () => setCopyStatus('Copied')} onMouseLeave={setCopyStatus('Copy to clipboard')}>{copyStatus}</button>
     )
 }
